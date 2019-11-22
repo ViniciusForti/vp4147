@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Clientes</title>
+</head>
+<body>
+
+<h1>Clientes</h1>
+<a href="/">Home</a><br>
+<a href="/cadastro">Cadastrar Cliente</a><br><br>
+{% for x in clientes %}
+    Nome: {{x.nome}}<br>
+    Email: {{x.email}}<br>
+    Endereco: {{x.endereco}}<br><br>
+<a href="/atualizaCliente/{{x.pk}}">Atualizar</a><br>
+<a href="/deleteCliente/{{x.pk}}">Excluir</a><br>
+-----------------------------------------<br>
+{% endfor %}
+</body>
+</html>
